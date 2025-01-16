@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2vr42ooucwge"]
+[gd_scene load_steps=6 format=3 uid="uid://d2vr42ooucwge"]
 
 [ext_resource type="Texture2D" uid="uid://c5ymy0nddeyta" path="res://assets/player/parrot.png" id="1_3plo8"]
 [ext_resource type="Script" path="res://scenes/animal/animal.gd" id="1_k60eb"]
+[ext_resource type="Texture2D" uid="uid://dqxo7xc0v2ibf" path="res://assets/items/arrow.png" id="3_loq03"]
+[ext_resource type="AudioStream" uid="uid://bo1pjddpqtr01" path="res://assets/audio/stretch2.ogg" id="4_kbbpp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_254ad"]
 radius = 19.0
@@ -29,6 +31,14 @@ offset_right = 27.0
 offset_bottom = -43.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "DEBUG"
+
+[node name="Arrow" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_loq03")
+offset = Vector2(250, 0)
+
+[node name="StretchSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kbbpp")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
