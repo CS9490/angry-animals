@@ -51,6 +51,8 @@ func set_release() -> void:
 	freeze = false
 	launch_sound.play()
 	apply_central_impulse(get_impulse())
+	SignalManager.on_attempt_made.emit()
+
 	
 	
 func set_new_state(new_state: ANIMAL_STATE) -> void:
@@ -151,6 +153,9 @@ func _on_input_event(viewport, event, shape_idx):
 
 func _on_sleeping_state_changed():
 	if sleeping:
+		var cb = get_colliding_bodies()
+		if cb.size() > 0:
+			cb[0].die() # only one cup at a time
 		call_deferred("die")
 
 
