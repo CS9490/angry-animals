@@ -19,6 +19,13 @@ func _ready():
 	score_label.text = str(best_sc)
 	level_label.text = "%s" % level_number
 
+#func _process(delta: float) -> void:
+	#if is_hovered() and scale != HOVER_SCALE:
+		#scale = HOVER_SCALE
+	#elif is_hovered() == false and scale == HOVER_SCALE: 
+		#scale = DEFAULT_SCALE
+# ^ this is a more computationally intensive, but it's just to show an example
+
 func _on_pressed():
 	ScoreManager.set_level_selected(level_number)
 	get_tree().change_scene_to_packed(_level_scene)
