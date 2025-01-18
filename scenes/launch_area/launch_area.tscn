@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://btstr1b4ui2td"]
+
+[ext_resource type="Texture2D" uid="uid://wgced0a3r8mv" path="res://assets/env/elementStone025.png" id="1_grrlf"]
+
+[node name="LaunchArea" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.8)
+texture = ExtResource("1_grrlf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(83.5, 74)
+rotation = 1.5708
+scale = Vector2(0.4, 0.6)
+texture = ExtResource("1_grrlf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(167.25, 44)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_grrlf")
