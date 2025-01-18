@@ -2,7 +2,7 @@ extends Node
 
 
 const DEFAULT_SCORE: int = 1000
-
+const SCORES_PATH: = "user://animals.json"
 
 var _level_selected: int = 1
 var _level_scores: Dictionary = {}
